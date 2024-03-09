@@ -10,7 +10,7 @@
     "doctrine/doctrine-bundle": "^2.7",
     "doctrine/doctrine-migrations-bundle": "^3.2",
     "doctrine/orm": "^2.12",
-    "knplabs/knp-time-bundle": "^1.18",
+    "knplabs/knp-time-bundle": "^2.2",
     "pagerfanta/doctrine-orm-adapter": "^3.6",
     "pagerfanta/twig": "^3.6",
     "stof/doctrine-extensions-bundle": "^1.7",
