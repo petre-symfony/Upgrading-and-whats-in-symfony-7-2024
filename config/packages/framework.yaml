@@ -1,21 +1,10 @@
 # see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
-<<<<<<< ours
   secret: '%env(APP_SECRET)%'
   #csrf_protection: true
-  annotations: false
-  http_method_override: false
-  handle_all_throwables: true
-  php_errors:
-    log: true
 
-  # Enables session support. Note that the session will ONLY be started if you read or write from it.
-  # Remove or comment this section to explicitly disable session support.
-  session:
-    handler_id: null
-    cookie_secure: auto
-    cookie_samesite: lax
-
+  # Note that the session will be started ONLY if you read or write from it.
+  session: true
 
   http_client:
     scoped_clients:
@@ -23,16 +12,9 @@ framework:
         base_uri: https://raw.githubusercontent.com
         headers:
           Authorization: 'Token %env(GITHUB_TOKEN)%'
-=======
-    secret: '%env(APP_SECRET)%'
-    #csrf_protection: true
 
-    # Note that the session will be started ONLY if you read or write from it.
-    session: true
-
-    #esi: true
-    #fragments: true
->>>>>>> theirs
+  #esi: true
+  #fragments: true
 
 when@test:
   framework:
