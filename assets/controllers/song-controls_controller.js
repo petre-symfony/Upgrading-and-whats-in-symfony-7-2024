@@ -5,14 +5,12 @@ export default class extends Controller {
     infoUrl: String
   }
 
-  play(event) {
+  async play(event) {
     event.preventDefault();
 
-    fetch(this.infoUrlValue)
-      .then((response) => {
-        console.log(response)
-        const audio = new Audio(response.data.url);
-        audio.play();
-      });
+    const response = await fetch(this.infoUrlValue)
+    console.log(response)
+    const audio = new Audio(response.data.url)
+    audio.play()
   }
 }
