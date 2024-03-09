@@ -24,9 +24,10 @@ class VinylController extends AbstractController {
 	#[Route('/', name: 'app_homepage')]
 	public function homepage(
 		#[MapQueryParameter()] string $query = '',
-		#[MapQueryParameter()] int $page = 1
+		#[MapQueryParameter()] int $page = 1,
+		#[MapQueryParameter(options: ['min_range' => 1, 'max_range' => 10])] int $limit = 10
 	): Response {
-		dump($query, $page);
+		dump($query, $page, $limit);
 		$tracks = [
 			['song' => 'Gangsta\'s Paradise', 'artist' => 'Coolio'],
 			['song' => 'Waterfalls', 'artist' => 'TLC'],
