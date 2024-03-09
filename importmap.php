@@ -39,4 +39,8 @@ return [
         'version' => '6.5.1',
         'type' => 'css',
     ],
+    '@fontsource-variable/roboto-condensed/index.min.css' => [
+        'version' => '5.0.2',
+        'type' => 'css',
+    ],
 ];
