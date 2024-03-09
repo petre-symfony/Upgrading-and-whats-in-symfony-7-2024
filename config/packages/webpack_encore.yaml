@@ -25,6 +25,7 @@ webpack_encore:
 
     # If you have multiple builds:
     # builds:
+<<<<<<< ours
     # pass "frontend" as the 3rg arg to the Twig functions
     # {{ encore_entry_script_tags('entry1', null, 'frontend') }}
 
@@ -33,6 +34,12 @@ webpack_encore:
   # Cache the entrypoints.json (rebuild Symfony's cache when entrypoints.json changes)
   # Put in config/packages/prod/webpack_encore.yaml
   # cache: true
+=======
+        # frontend: '%kernel.project_dir%/public/frontend/build'
+
+        # pass the build name as the 3rd argument to the Twig functions
+        # {{ encore_entry_script_tags('entry1', null, 'frontend') }}
+>>>>>>> theirs
 
 framework:
   assets:
