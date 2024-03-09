@@ -9,8 +9,8 @@ export default class extends Controller {
     event.preventDefault();
 
     const response = await fetch(this.infoUrlValue)
-    console.log(response)
-    const audio = new Audio(response.data.url)
+    const data = await response.json()
+    const audio = new Audio(data.url)
     audio.play()
   }
 }
