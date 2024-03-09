@@ -16,13 +16,8 @@ use function Symfony\Component\String\u;
 class VinylController extends AbstractController {
 	public function __construct(
 		#[Autowire(param: 'kernel.debug')]
-		private bool $isDebug,
-		#[AutowireIterator('console.command')]
-		private iterable $commands
+		private bool $isDebug
 	) {
-		foreach($this->commands as $command) {
-			dump($command);
-		};
 	}
 
 	#[Route('/', name: 'app_homepage')]
